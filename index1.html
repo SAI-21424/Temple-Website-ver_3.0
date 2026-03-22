@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="tem.css">
+  
+</head>
+<body class="wall">
+
+
+<nav>
+    <div class="logo">Temple Seva</div>
+    <ul>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="index1.html">Booking</a></li>
+        <li><a href="Reference.html">Reference</a></li>
+        <li><a href="Contact11.html">Contact</a></li>
+        <li><a onclick="window.location.href='Login.html'" >Logout</a>
+        </li>
+    </ul>
+</nav> <br> <br>
+
+
+<div class="container">
+    <h2>Online Ticket Booking & Seva Dharshan</h2>
+
+    <form>
+         <label>Full Name</label>
+         <input type="text" placeholder="Enter Full Name" required>
+
+         <label>Select Date</label>
+         <input type="date" required>
+         
+          <label>Phone number</label>
+          <input type="tel"   maxlength="10"
+          pattern= "[6789][0-9]{9}"
+          placeholder="Enter 10 digit Phone Number" 
+          autocomplete="tel" required>
+            
+         <label>email</label>
+         <input type="email" name="email"
+         placeholder="enter mail" 
+         autocomplete="email">
+         <label>select the temple</label>
+         <select required>
+  
+         <option>Thirupathi</option>
+         <option>Ayodhya</option>
+         <option>Trimbakeshwar</option>
+    </select>
+
+         <label>Select Seva Type</label>
+        
+    <select required>
+             value="">--Select Seva--</option>
+            <option>General Dharshan</option>
+            <option>Special Entry Dharshan</option>
+            <option>Abhishekam</option>
+            <option>Archana</option>
+        </select>
+
+        <label>Number of Tickets</label>
+        <input type="number" min="1" max="10" required>
+
+        <p>Contact us:
+            <a href="tel:+1234567890">+91 1234567890</a>
+        </p>
+
+        <button type="Submit">submit</button>
+    </form>
+</div>
+  <script src="book.js"></script>
+</body>
+</html>

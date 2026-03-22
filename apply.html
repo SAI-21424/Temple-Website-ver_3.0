@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Apply Job</title>
+<link rel="stylesheet" href="ajobs.css">
+</head>
+
+ <nav>
+     <div class="logo" >
+        Job Application Form</div>
+ </nav>
+
+ <body >
+<div class="container1">
+  <div class="login-box">
+    
+    <h2>Apply Now</h2>
+
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Phone Number" required>
+    <input type="text" placeholder="Job Role" required>
+    
+    <textarea placeholder="Why should we hire you?" style="width:100%; padding:10px; margin:10px 0;"></textarea>
+     <label style= "display:block; text-align: left;">Upload Resume:</label>
+    <input type="file" accept=".pdf,.doc,docx">
+
+    <button onclick="submitForm()">Submit Application</button>
+    <button onclick="goBack()" style="background: gray;">Back</button>
+
+  </div>
+</div>
+   
+<script>
+function submitForm() {
+  alert("Application Submitted Successfully!");
+  window.location.href = "ajobs.html";
+}
+
+function goBack() {
+  window.location.href = "ajobs.html";
+}
+</script>
+
+
+</body>
+</html>
