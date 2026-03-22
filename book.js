@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             message.innerText = "Login Successful! Redirecting...";
 
             setTimeout(() => {
-                window.location.href = "index.html";
+                window.location.href = "index1.html";
             }, 1500);
         } else {
             message.style.color = "red";
