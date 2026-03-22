@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (username === "hello","sai" && password === "1234") {
+        if (username === "sai" && password === "1234") {
             message.style.color = "green";
             message.innerText = "Login Successful! Redirecting...";
 
