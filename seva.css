@@ -64,6 +64,6 @@ nav ul li a:hover {
 body{
     padding: 0px;
     margin: 0px;
-    
+    background-position: cover;
     background:linear-gradient(to right, #ffcc70, #ff8177);
 }
