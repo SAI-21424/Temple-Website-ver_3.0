@@ -62,6 +62,23 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.removeChild(postForm);
     }
 
+    async function submitWithFetch(payload) {
+        const body = new URLSearchParams();
+
+        Object.entries(payload).forEach(function ([key, value]) {
+            body.append(key, value);
+        });
+
+        await fetch(googleFormConfig.formAction, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+            },
+            body: body.toString()
+        });
+    }
+
     function isGoogleFormConfigReady() {
         const entries = googleFormConfig.entries || {};
 
@@ -77,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         if (!form.checkValidity()) {
@@ -93,7 +110,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const payload = getGoogleFormPayload(formData);
-        submitToGoogleForm(payload);
+
+        try {
+            await submitWithFetch(payload);
+        } catch (error) {
+            try {
+                submitToGoogleForm(payload);
+            } catch (fallbackError) {
+                message.className = "status-message error";
+                message.textContent = "Unable to submit booking on this device. Please try again.";
+                return;
+            }
+        }
 
         message.className = "status-message success";
         message.textContent = "Booking submitted. Check your linked Google Sheet.";

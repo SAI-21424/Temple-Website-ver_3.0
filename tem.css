@@ -1,4 +1,8 @@
- body {
+* {
+    box-sizing: border-box;
+}
+
+body {
      font-family: Arial, sans-serif;
      margin: 0;
      padding: 0;
@@ -27,6 +31,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -38,6 +44,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -60,7 +67,7 @@ nav ul li a:hover {
 .container {
     background: hsl(0, 0%, 99%);
     padding: 30px;
-    width: 350px;
+    width: min(350px, calc(100% - 32px));
     margin: 80px auto;
     
     border-radius: 15px;
@@ -116,4 +123,40 @@ button:hover {
 
 .status-message.error {
     color: #b22222;
+}
+
+@media (max-width: 640px) {
+    body,
+    .wall {
+        min-height: 100vh;
+        background-position: center;
+    }
+
+    nav {
+        padding: 12px 16px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    .container {
+        margin: 24px auto;
+        padding: 22px 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
 }
