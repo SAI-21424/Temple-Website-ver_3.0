@@ -15,7 +15,7 @@
         <li><a href="index1.html">Booking</a></li>
         <li><a href="Reference.html">Reference</a></li>
         <li><a href="Contact11.html">Contact</a></li>
-        <li><a onclick="window.location.href='index.html'" >Logout</a>
+        <li><a href="index.html">Logout</a>
         </li>
     </ul>
 </nav> <br> <br>
@@ -24,51 +24,53 @@
 <div class="container">
     <h2>Online Ticket Booking & Seva Dharshan</h2>
 
-    <form>
-         <label>Full Name</label>
-         <input type="text" placeholder="Enter Full Name" required>
+    <form id="booking-form">
+         <label for="full-name">Full Name</label>
+         <input id="full-name" name="full_name" type="text" placeholder="Enter Full Name" required>
 
-         <label>Select Date</label>
-         <input type="date" required>
+         <label for="booking-date">Select Date</label>
+         <input id="booking-date" name="booking_date" type="date" required>
          
-          <label>Phone number</label>
-          <input type="tel"   maxlength="10"
+          <label for="phone-number">Phone number</label>
+          <input id="phone-number" name="phone_number" type="tel"   maxlength="10"
           pattern= "[6789][0-9]{9}"
           placeholder="Enter 10 digit Phone Number" 
           autocomplete="tel" required>
             
-         <label>email</label>
-         <input type="email" name="email"
+         <label for="email">email</label>
+         <input id="email" type="email" name="email"
          placeholder="enter mail" 
-         autocomplete="email">
-         <label>select the temple</label>
-         <select required>
+         autocomplete="email" required>
+         <label for="temple">select the temple</label>
+         <select id="temple" name="temple" required>
   
          <option>Thirupathi</option>
          <option>Ayodhya</option>
          <option>Trimbakeshwar</option>
     </select>
 
-         <label>Select Seva Type</label>
+         <label for="seva-type">Select Seva Type</label>
         
-    <select required>
-             value="">--Select Seva--</option>
+    <select id="seva-type" name="seva_type" required>
+            <option value="">--Select Seva--</option>
             <option>General Dharshan</option>
             <option>Special Entry Dharshan</option>
             <option>Abhishekam</option>
             <option>Archana</option>
         </select>
 
-        <label>Number of Tickets</label>
-        <input type="number" min="1" max="10" required>
+        <label for="ticket-count">Number of Tickets</label>
+        <input id="ticket-count" name="ticket_count" type="number" min="1" max="10" required>
 
         <p>Contact us:
             <a href="tel:+1234567890">+91 1234567890</a>
         </p>
 
-        <button type="Submit">submit</button>
+        <button type="submit">submit</button>
+        <p id="booking-message" class="status-message" aria-live="polite"></p>
     </form>
 </div>
-  <script src="book.js"></script>
+  <script src="google-form-config.js"></script>
+  <script src="booking.js"></script>
 </body>
 </html>

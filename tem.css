@@ -102,3 +102,18 @@ button:hover {
  text-align: right;
  margin-top: 10px;
 }
+
+.status-message {
+    min-height: 24px;
+    margin-top: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-message.success {
+    color: #1f7a1f;
+}
+
+.status-message.error {
+    color: #b22222;
+}
