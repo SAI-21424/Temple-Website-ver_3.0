@@ -7,7 +7,7 @@ body {
      margin: 0;
      padding: 0;
      background-image: url("bg.jpg");
-     background-size: cover;
+     background-size: 280vh;
      background-position: cover;
      background-repeat: no-repeat ;
     
@@ -17,15 +17,14 @@ body {
      margin: 0;
      padding: 0;
      background-image: url("bg.jpg");
-     background-size: cover;
+     background-size: 280vh;
      background-position: center;
      background-repeat: no-repeat ;
      height: 100vh;
 
 }
 
-
-nav {
+ nav{
     background-color: #f60f2e;
     padding: 10px 20px;
     display: flex;
@@ -46,7 +45,7 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 nav ul li {
